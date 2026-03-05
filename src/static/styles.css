@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+input, button {
+    padding: 8px;
+}
