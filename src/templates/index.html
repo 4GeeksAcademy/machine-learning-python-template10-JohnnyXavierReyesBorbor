@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción de Deserción Estudiantil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎓 Predicción de Deserción Estudiantil</h1>
+
+    <form action="/predict" method="post">
+
+        <input type="number" step="any" name="study_hours" placeholder="Study Hours per Day" required>
+
+        <input type="number" step="any" name="attendance" placeholder="Attendance Rate" required>
+
+        <input type="number" step="any" name="delay" placeholder="Assignment Delay Days" required>
+
+        <input type="number" step="any" name="stress" placeholder="Stress Index (1-10)" required>
+
+        <input type="number" step="any" name="gpa" placeholder="GPA" required>
+
+        <button type="submit">Predecir</button>
+
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Resultado: {{ prediction }}
+        </div>
+    {% endif %}
+
+</body>
+</html>
