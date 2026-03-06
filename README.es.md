@@ -39,6 +39,9 @@ La aplicación fue desarrollada con:
 
 https://machine-learning-python-template10-j0et.onrender.com/
 
+- **StreamLit**
+
+https://machine-learning-python-template10-q70r.onrender.com/
 
 ---
 
