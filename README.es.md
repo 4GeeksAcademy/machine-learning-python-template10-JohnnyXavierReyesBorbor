@@ -37,7 +37,7 @@ La aplicación fue desarrollada con:
 
 - **Flask**
 
-https://machine-learning-python-template10-wf45.onrender.com/
+https://machine-learning-python-template10-j0et.onrender.com/
 
 
 ---
