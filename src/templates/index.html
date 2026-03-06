@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Predicción GPA</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Student Dropout Prediction</title>
 </head>
+
 <body>
 
-    <h1>Predicción Académica</h1>
+<h2>Student Dropout Predictor</h2>
 
-    <form method="POST">
-        <input type="number" step="any" name="Age" placeholder="Age" required>
-        <input type="number" step="any" name="Family_Income" placeholder="Family Income" required>
-        <input type="number" step="any" name="Study_Hours_per_Day" placeholder="Study Hours per Day" required>
-        <input type="number" step="any" name="Attendance_Rate" placeholder="Attendance Rate" required>
-        <input type="number" step="any" name="Assignment_Delay_Days" placeholder="Assignment Delay Days" required>
-        <input type="number" step="any" name="Travel_Time_Minutes" placeholder="Travel Time Minutes" required>
-        <input type="number" step="any" name="Stress_Index" placeholder="Stress Index" required>
-        <input type="number" step="any" name="Gender_n" placeholder="Gender" required>
-        <input type="number" step="any" name="Internet_Access_n" placeholder="Internet Access" required>
-        <input type="number" step="any" name="Part_Time_Job_n" placeholder="Part Time Job" required>
-        <input type="number" step="any" name="Scholarship_n" placeholder="Scholarship" required>
-        <input type="number" step="any" name="Semester_n" placeholder="Semester" required>
-        <input type="number" step="any" name="Department_n" placeholder="Department" required>
-        <input type="number" step="any" name="Parental_Education_n" placeholder="Parental Education" required>
+<form method="POST">
 
-        <button type="submit">Predecir</button>
-    </form>
+Age:
+<input type="number" name="age"><br><br>
 
-    {% if prediction %}
-        <h2>Resultado: {{ prediction }}</h2>
-    {% endif %}
+Study Hours per Day:
+<input type="number" step="0.1" name="study_hours"><br><br>
+
+Attendance Rate:
+<input type="number" name="attendance"><br><br>
+
+Stress Index:
+<input type="number" name="stress"><br><br>
+
+GPA:
+<input type="number" step="0.1" name="gpa"><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+<h3>{{ prediction }}</h3>
 
 </body>
 </html>
